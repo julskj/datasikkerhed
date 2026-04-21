@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Før du klikker</title>
+  <title>Før Du Klikker - Cybersikkerhed Scenario</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
-
 <body>
+  <div class="app-wrapper">
 
-<div class="app-wrapper">
-
-  <div class="cyber-background">
-    <div class="scanlines"></div>
-  </div>
-
-  <main class="main-container">
-    <div id="scene-container"></div>
-  </main>
-
-  <aside class="ddos-banner">
-    <div class="ddos-banner__track">
-      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
-      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
-      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
+    <!-- Baggrund -->
+    <div class="cyber-background" aria-hidden="true">
+      <div class="scanlines"></div>
     </div>
-  </aside>
 
-</div>
+    <!-- Scenen kommer ind her via js -->
+    <main class="main-container">
+      <article id="scene-container" class="scene-card" aria-live="polite"></article>
+    </main>
 
+    <!-- Banner nederst -->
+    <aside class="ddos-banner" aria-label="System advarsel">
+      <div class="ddos-banner__track">
+        <span class="ddos-banner__text">⚠ SYSTEM ERROR / LANGSOMT SYSTEM - DDOS-ANGREB AKTIV - STRESSER & PÅVIRKER DINE VALG ⚠</span>
+        <span class="ddos-banner__text">⚠ SYSTEM ERROR / LANGSOMT SYSTEM - DDOS-ANGREB AKTIV - STRESSER & PÅVIRKER DINE VALG ⚠</span>
+      </div>
+    </aside>
+
+  </div>
 </body>
 </html>
