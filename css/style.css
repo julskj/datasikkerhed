@@ -1,4 +1,99 @@
 * {
-  color: gray;
-  padding: 2em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+  background: #050510;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene-card {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+.scene-card__title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+}
+
+.choice-btn {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 2px solid;
+  cursor: pointer;
+}
+.choice-btn:hover {
+  transform: scale(1.05);
+}
+
+.theme-green {
+  color: #00ff00;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.theme-red {
+  color: #ff0033;
+  box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
+}
+
+.theme-yellow {
+  color: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+}
+
+.theme-blue {
+  color: #00ccff;
+  box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
+}
+
+.theme-purple {
+  color: #aa00ff;
+  box-shadow: 0 0 10px #aa00ff, 0 0 20px #aa00ff;
+}
+
+.cyber-background {
+  position: absolute;
+  inset: 0;
+}
+.cyber-background .scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.7) 2px, rgba(0, 0, 0, 0.7) 4px);
+}
+
+.ddos-banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.ddos-banner__track {
+  display: flex;
+  animation: marquee 10s linear infinite;
+}
+.ddos-banner__text {
+  padding: 1rem;
+  color: #ffcc00;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=style.css.map */
