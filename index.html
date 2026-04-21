@@ -1,44 +1,36 @@
+<!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Før du klikker - cypersikkerhed</title>
-    <link rel="stylesheet" href="css/style.css">
-   
-   <!-- Cyperpunk font tema-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-   
-    <!--JS -->
-    <script src="js/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Før du klikker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    
-    <!-- Animeret baggrund-->
+
 <div class="app-wrapper">
-  <div class="cyber-background" aria-hidden="true">
-        <div class="scanlines"></div>
-        <div class="glow-layer"></div>
-        <div class="noise-overlay"></div>
+
+  <div class="cyber-background">
+    <div class="scanlines"></div>
+  </div>
+
+  <main class="main-container">
+    <div id="scene-container"></div>
+  </main>
+
+  <aside class="ddos-banner">
+    <div class="ddos-banner__track">
+      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
+      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
+      <span class="ddos-banner__text">⚠ SYSTEM ERROR / DDOS AKTIV ⚠</span>
     </div>
+  </aside>
 
-<!-- Header -->
- <main class="main-container">
-<!--Scene container (opdateres via JS)-->
-<article id="scene-container" class="scene-container" aria-live="polite">
-    <!-- JS injicerer dynamisk indhold her baseret på brugerens valg -->
- </main>
-
- <!--banner (DDOS system advarsel)-->
- <aside class="ddos banner" aria-label="system advarsel">
-    <div class="ddos-banner_track">
-        <!-- teksten gentages-->
-         <span class="ddos-banner_text>"> SYSTEM ADVARSEL / LANGSOMT SYSTEM - DDOS-ANGREB AKTIVT - STRESSER PG PÅVIKRER DINE VALG</span>
-         <span class="ddos-banner_tekt"> SYSTEM ADVARSEL / LANGSOMT SYSTEM - DDOS-ANGREB AKTIVT - STRESSER PG PÅVIKRER DINE VALG</span>
-    
-        </div>
-</aside>
+</div>
 
 </body>
 </html>

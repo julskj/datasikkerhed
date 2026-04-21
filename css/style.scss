@@ -1,71 +1,91 @@
-// VARIABLES
 $font-main: 'Share Tech Mono', monospace;
 $font-display: 'Orbitron', sans-serif;
 
-$bg: #050510;
-$text: #fff;
-
-// MIXINS
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 @mixin glow($color) {
-  box-shadow: 0 0 10px $color, 0 0 20px $color;
+  box-shadow:
+    0 0 10px $color,
+    0 0 30px $color,
+    inset 0 0 10px $color;
 }
 
-// BASE
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
   font-family: $font-main;
-  background: $bg;
-  color: $text;
-  height: 100vh;
-  overflow: hidden;
+  background: #050510;
+  color: white;
+  overflow:hidden;
 }
 
-// LAYOUT
 .main-container {
-  height: 100%;
-  @include flex-center;
+  height:100vh;
+  @include center;
 }
 
-// SCENE
-.scene-card {
-  max-width: 800px;
-  padding: 2rem;
-  background: rgba(0,0,0,0.85);
-  text-align: center;
-
-  &__title {
-    font-family: $font-display;
-    font-size: 2.5rem;
-  }
+#scene-container {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:1.5rem;
 }
 
-// BUTTON
-.choice-btn {
-  margin-top:1rem;
+/* MAIN */
+.scene-main {
+  text-align:center;
+  padding:2rem;
+  border:2px solid currentColor;
+  max-width:700px;
+  width:100%;
+  @include glow(currentColor);
+}
+
+.scene-main h1 {
+  font-family:$font-display;
+  font-size:2.5rem;
+}
+
+/* KNAPPER */
+.choice {
+  width:100%;
   padding:1rem;
-  border:2px solid;
+  border-top:1px solid currentColor;
   cursor:pointer;
+  text-align:center;
+  display:block;
 
   &:hover {
-    transform: scale(1.05);
+    background:currentColor;
+    color:black;
   }
 }
 
-// THEMES
-.theme-green { color:#00ff00; @include glow(#00ff00); }
-.theme-red { color:#ff0033; @include glow(#ff0033); }
-.theme-yellow { color:#ffcc00; @include glow(#ffcc00); }
-.theme-blue { color:#00ccff; @include glow(#00ccff); }
-.theme-purple { color:#aa00ff; @include glow(#aa00ff); }
+/* PREVIEW */
+.preview {
+  display:flex;
+  gap:1rem;
+}
 
-// BACKGROUND
+.preview-box {
+  padding:0.8rem 1rem;
+  border:2px solid currentColor;
+  opacity:0.5;
+  font-size:0.75rem;
+}
+
+/* COLORS */
+.green { color:#00ff00; }
+.red { color:#ff0033; }
+.yellow { color:#ffcc00; }
+.blue { color:#00ccff; }
+.purple { color:#aa00ff; }
+
+/* BACKGROUND */
 .cyber-background {
   position:absolute;
   inset:0;
@@ -83,24 +103,31 @@ body {
   }
 }
 
-// DDOS
+/* BANNER  */
 .ddos-banner {
   position:absolute;
   bottom:0;
   width:100%;
+  overflow:hidden; // vigtigt!
+
+  border-top:2px solid #ffcc00;
 
   &__track {
     display:flex;
-    animation: marquee 10s linear infinite;
+    width:300%; // vigtigt!
+    animation: marquee 12s linear infinite;
   }
 
   &__text {
+    width:100%;
     padding:1rem;
     color:#ffcc00;
+    font-weight:bold;
+    text-align:center;
   }
 }
 
 @keyframes marquee {
   0% { transform:translateX(0); }
-  100% { transform:translateX(-50%); }
+  100% { transform:translateX(-66.666%); }
 }

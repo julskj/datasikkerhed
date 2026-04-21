@@ -7,64 +7,88 @@
 body {
   font-family: "Share Tech Mono", monospace;
   background: #050510;
-  color: #fff;
-  height: 100vh;
+  color: white;
   overflow: hidden;
 }
 
 .main-container {
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.scene-card {
-  max-width: 800px;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.85);
-  text-align: center;
+#scene-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
-.scene-card__title {
+
+/* MAIN */
+.scene-main {
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid currentColor;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 10px currentColor, 0 0 30px currentColor, inset 0 0 10px currentColor;
+}
+
+.scene-main h1 {
   font-family: "Orbitron", sans-serif;
   font-size: 2.5rem;
 }
 
-.choice-btn {
-  margin-top: 1rem;
+/* KNAPPER */
+.choice {
+  width: 100%;
   padding: 1rem;
-  border: 2px solid;
+  border-top: 1px solid currentColor;
   cursor: pointer;
+  text-align: center;
+  display: block;
 }
-.choice-btn:hover {
-  transform: scale(1.05);
+.choice:hover {
+  background: currentColor;
+  color: black;
 }
 
-.theme-green {
+/* PREVIEW */
+.preview {
+  display: flex;
+  gap: 1rem;
+}
+
+.preview-box {
+  padding: 0.8rem 1rem;
+  border: 2px solid currentColor;
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+/* COLORS */
+.green {
   color: #00ff00;
-  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
 }
 
-.theme-red {
+.red {
   color: #ff0033;
-  box-shadow: 0 0 10px #ff0033, 0 0 20px #ff0033;
 }
 
-.theme-yellow {
+.yellow {
   color: #ffcc00;
-  box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
 }
 
-.theme-blue {
+.blue {
   color: #00ccff;
-  box-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff;
 }
 
-.theme-purple {
+.purple {
   color: #aa00ff;
-  box-shadow: 0 0 10px #aa00ff, 0 0 20px #aa00ff;
 }
 
+/* BACKGROUND */
 .cyber-background {
   position: absolute;
   inset: 0;
@@ -75,18 +99,25 @@ body {
   background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.7) 2px, rgba(0, 0, 0, 0.7) 4px);
 }
 
+/* BANNER  */
 .ddos-banner {
   position: absolute;
   bottom: 0;
   width: 100%;
+  overflow: hidden;
+  border-top: 2px solid #ffcc00;
 }
 .ddos-banner__track {
   display: flex;
-  animation: marquee 10s linear infinite;
+  width: 300%;
+  animation: marquee 12s linear infinite;
 }
 .ddos-banner__text {
+  width: 100%;
   padding: 1rem;
   color: #ffcc00;
+  font-weight: bold;
+  text-align: center;
 }
 
 @keyframes marquee {
@@ -94,6 +125,6 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-66.666%);
   }
 }/*# sourceMappingURL=style.css.map */
