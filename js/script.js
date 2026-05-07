@@ -21,7 +21,7 @@ const scenes = {
   scene1: {
     id: 'scene1',
     topTitle: 'SCENE 1',
-    title: '"DU HAR MODTAGET EN MAIL FRA IBA AFDELINGEN"',
+    title: '"DU SIDDER I DIT KLASSELOKALE OG MODTAGER EN MAIL FRA IBA AFDELINGEN"',
     subtitle: '"Opdater dine SU-oplysninger nu for at undgå SU-stop!"',
     color: 'green',
     choices: [
